@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #009688 0px , #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
+}
+
+.clearfix{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.f.left{
+    float: left;
+}
+
+.f.right{
+    float: right;
+}
+
+#root{
+    height: 95%;
+    margin: auto;
+    width: 80%;
+    max-width: 1180px;
+    display: flex;
+    flex-direction: row;
+}
+
+.app-left, .app-right{
+    height: 100%;
+}
+
+.app-left{
+    width: 35%;
+    border-right: 1px solid #D6D6D6;
+}
+
+.app-right{
+    position: relative;
+    width: 65%;
+}
+
+.left-account, .right-account{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    background: #EAEAEA;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-account-logo, .right-account-logo{
+    display: flex;
+    align-items: center;
+}
+
+.left-account .left-account-logo img, .right-account .right-account-logo img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 100%;
+}
+
+.left-account .left-account-logo span, .right-account .right-account-logo span{
+    margin-left: 10px;
+}
+
+.left-account .left-icone i, .right-account .right-icone i{
+    cursor: pointer;
+    margin: auto 10px;
+    color: rgb(177, 177, 177);
+    font-size: 22px;
+}
+
+.left-notifica{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background: #8EDAFC;
+}
+
+.left-notifica .left-notifica-logo{
+    width: 50px;
+    height: 50px;
+    margin: auto 0 auto 20px;
+    background: #F2F8FF;
+    border-radius: 100%;
+    text-align: center;
+    color: #8EDAFC;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.left-notifica .left-notifica-testo{
+    width: calc(100% - 50px);
+    height: auto;
+    margin: auto;
+    padding: 0 10px;
+}
+
+.left-barra-ricerca{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    background: #FAFAFA;
+}
+
+.left-barra-ricerca .left-ricerca-label{
+    width: calc(15% - 7px);
+    height: 36px;
+    margin: 7px 0 7px 7px;
+    border: 1px solid #F5F5F5;
+    border-right: 0px;
+    background: #FFF;
+    line-height: 36px;
+    text-align: center;
+    color: #B6B9B6;
+}
+
+.left-barra-ricerca .left-barra-ricerca-input{
+    width: calc(85% - 7px);
+    height: 36px;
+    margin: 7px 7px 7px 0;
+    padding: 0 10px;
+    border: 1px solid #F5F5F5;
+    border-radius: 0px 3px 3px 0;
+    color: #B6B9B6;
+}
+
+.left-contatti{
+    width: 100%;
+    height: calc(100% - 70px - 50px - 80px);
+    background: #FFF;
+    overflow-y: auto;
+}
+
+.left-contatti .contatto{
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #F8F8F8;
+}
+
+.left-contatti .contatto:last-child{
+    border-bottom: 0;
+}
+
+.left-contatti .contatto .contatto-logo{
+    width: 60px;
+    height: 60px;
+    margin: auto 20px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.left-contatti .contatto .contatto-logo img{
+    width: 100%;
+}
+
+.left-contatti .contatto .contatto-info{
+    width: calc(100% - 100px);
+    margin: auto 20px auto 0;
+}
+
+.left-contatti .contatto .contatto-info .time{
+    color: #B6B9B6;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.right-container-messaggi{
+    width: 100%;
+    height: calc(100% - 70px - 70px);
+}
+
+.right-container-messaggi .right-messaggi{
+    height: 100%;
+    width: 100%;
+    padding: 5% 20%;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    overflow-y: auto;
+}
+
+.right-footer{
+    display: flex;
+    flex-direction: row;
+    background: #F3EEEA;
+    width: 100%;
+    height: 70px;
+}
+
+.right-footer .right-footer-icona{
+    cursor: pointer;
+    width: 20%;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    font-size: 25px;
+    color: #687278;
+}
+
+.right-footer .right-footer-input-messaggio{
+    width: 80%;
+    height: 50px;
+    margin: 10px 0;
+    padding: 25px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: lighter;
+}
