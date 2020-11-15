@@ -34,7 +34,7 @@
                     <label for="search" class="left-ricerca-label">
                         <i class="fas fa-search"></i>
                     </label>
-                    <input type="contacts-filter" placeholder="Cerca o inizia una nuova chat" name="ricerca" class="left-barra-ricerca-input">
+                    <input type="contacts-filter" placeholder="Cerca o inizia una nuova chat" name="ricerca" class="left-barra-ricerca-input" v-model="stringaDaRicercare">
                 </div>
                 <div class="left-contatti">
                     <!-- <div class="contatto">
@@ -47,7 +47,7 @@
                             <small>Ultimo messaggio inviato</small>
                         </div>
                     </div> -->
-                    <div class="contatto" v-for="(contatto, indice) in contacts" @click="cambia_chat(indice)">
+                    <div class="contatto" v-for="(contatto, indice) in ricercaContatti" @click="cambia_chat(indice)">
                         <div class="contatto-logo">
                             <img v-bind:src="'img/' + contatto.avatar + '.png'" alt="">
                         </div>

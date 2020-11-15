@@ -4,6 +4,7 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            stringaDaRicercare: '',
             nuovoMessaggio: '',
             indice_contatto: 0,
             user: {
@@ -113,9 +114,9 @@ var app = new Vue(
                 return classe;
             },
             aggiungiMessaggio: function() {
-                var oggi = new Date();
-                
-                var data = oggi.getDate()+'/'+(oggi.getMonth()+1)+'/'+oggi.getFullYear()+' '+oggi.getHours()+":"+oggi.getMinutes()+":"+oggi.getSeconds();
+                let oggi = new Date();
+
+                let data = oggi.getDate()+'/'+(oggi.getMonth()+1)+'/'+oggi.getFullYear()+' '+oggi.getHours()+":"+oggi.getMinutes()+":"+oggi.getSeconds();
 
                 let stringaData = data.toString();
 
@@ -136,7 +137,42 @@ var app = new Vue(
                 this.contacts[this.indice_contatto].messages.push(value);
 
                 this.nuovoMessaggio = "";
-            },
+
+                setTimeout(() => {
+                    let oggi = new Date();
+
+                    let data = oggi.getDate()+'/'+(oggi.getMonth()+1)+'/'+oggi.getFullYear()+' '+oggi.getHours()+":"+oggi.getMinutes()+":"+oggi.getSeconds();
+
+                    let stringaData = data.toString();
+
+                    let messaggio = 'ok';
+
+                    let value = {
+                        "date": stringaData,
+                        "message": messaggio,
+                        "status": 'received'
+                    };
+
+                    console.log(value);
+
+                    if (!value) {
+                        return;
+                    }
+
+                    this.contacts[this.indice_contatto].messages.push(value);
+                }, 1000);
+            }
+        },
+        computed : {
+            ricercaContatti: function() {
+                if (this.stringaDaRicercare) {
+                    return this.contacts.filter((item)=>{
+                        return this.stringaDaRicercare.toLowerCase().split(' ').every(v => item.name.toLowerCase().includes(v))
+                    })
+                } else {
+                    return this.contacts;
+                }
+            }
         }
     }
 );
