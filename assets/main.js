@@ -164,6 +164,16 @@ var app = new Vue(
             },
             rimuoviMessaggio: function (indice_messaggio) {
                 this.contacts[this.indice_contatto].messages.splice(indice_messaggio, 1);
+            },
+            ultimoMessaggio: function(indice_contatto) {
+                let nMessaggi = this.contacts[indice_contatto].messages.length;
+
+                return this.contacts[indice_contatto].messages[nMessaggi - 1].message;
+            },
+            ultimoMessaggioOra: function(indice_contatto) {
+                let nMessaggi = this.contacts[indice_contatto].messages.length;
+
+                return this.contacts[indice_contatto].messages[nMessaggi - 1].date;
             }
         },
         computed : {
@@ -175,11 +185,6 @@ var app = new Vue(
                 } else {
                     return this.contacts;
                 }
-            },
-            ultimoMessaggio: function() {
-                let nMessaggi = this.contacts[this.indice_contatto].messages.length;
-
-                return this.contacts[this.indice_contatto].messsages[nMessaggi - 1].message;
             }
         }
     }
