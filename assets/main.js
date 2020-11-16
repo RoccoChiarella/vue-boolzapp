@@ -161,6 +161,9 @@ var app = new Vue(
 
                     this.contacts[this.indice_contatto].messages.push(value);
                 }, 1000);
+            },
+            rimuoviMessaggio: function (indice_messaggio) {
+                this.contacts[this.indice_contatto].messages.splice(indice_messaggio, 1);
             }
         },
         computed : {
