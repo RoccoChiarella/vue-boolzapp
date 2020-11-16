@@ -177,7 +177,7 @@ var app = new Vue(
                 }
             },
             ultimoMessaggio: function() {
-                let nMessaggi = this.messages.length;
+                let nMessaggi = this.contacts[this.indice_contatto].messages.length;
 
                 return this.contacts[this.indice_contatto].messsages[nMessaggi - 1].message;
             }
