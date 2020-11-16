@@ -56,7 +56,7 @@
                                 <h3 class="contact-name">{{contatto.name}}</h3>
                                 <span class="time">12:00</span>
                             </div>
-                            <small>Ultimo messaggio inviato</small>
+                            <small>{{ultimoMessaggio}}</small>
                         </div>
                     </div>
                 </div>
@@ -77,13 +77,13 @@
                     <div class="right-messaggi">
                         <div v-for="(messaggio, indice_messaggio) in contacts[indice_contatto].messages" :class="classeMessaggio(indice_messaggio)">
                             <span class="testo-messaggio">{{messaggio.message}}</span>
-                            <small class="tempo-messaggio">{{messaggio.date}}</small>
                             <div class="dropdown-message">
                                 <i class="fas fa-angle-down"></i>
                                 <div class="dropdown-content">
                                     <a href="#" @click="rimuoviMessaggio(indice_messaggio)">Elimina messaggio</a>
                                 </div>
                             </div>
+                            <small class="tempo-messaggio">{{messaggio.date}}</small>
                         </div>
                     </div>
                 </div>

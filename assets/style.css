@@ -185,9 +185,6 @@ body{
 }
 
 .right-container-messaggi .right-messaggi .messaggio{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
     margin: 5px 0;
     padding: 15px 15px 20px 15px;
@@ -217,15 +214,16 @@ body{
     clear: both;
 }
 
-.tempo-messaggio{
-    font-size: 10px;
-    font-weight: lighter;
-    opacity: 0.8;
+.testo-messaggio{
+    float: left;
+    width: 95%;
 }
 
 .dropdown-message{
-  position: relative;
-  display: inline-block;
+    float: right;
+    width: 5%;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-message:hover .dropdown-content{
@@ -233,19 +231,26 @@ body{
 }
 
 .dropdown-content{
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .dropdown-content a{
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.tempo-messaggio{
+    margin-top: 5px;
+    float: right;
+    font-size: 10px;
+    font-weight: lighter;
+    opacity: 0.8;
 }
 
 .right-footer{
