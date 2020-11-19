@@ -10,6 +10,7 @@ body{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(to bottom, #009688 0px , #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
+    font-family: 'Open Sans', sans-serif;
 }
 
 #root{
